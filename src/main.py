@@ -1,7 +1,8 @@
+import asyncio
 from pygame import init, display, time, event, QUIT, quit
 from Game import MainGame
 
-def main():
+async def main():
     init()
 
     screen = display.set_mode((800, 600))
@@ -24,9 +25,10 @@ def main():
 
         display.flip()
         clock.tick(60)
+        await asyncio.sleep(0)
 
     quit()
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
