@@ -23,7 +23,6 @@ def main():
         MainGame.update()
 
         display.flip()
-
         clock.tick(60)
 
     quit()
